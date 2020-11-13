@@ -10,7 +10,11 @@
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
     "serve": "node server.js"
   },
-  "keywords": ["webpack", "webpack 5", "webpack boilerplate"],
+  "keywords": [
+    "webpack",
+    "webpack 5",
+    "webpack boilerplate"
+  ],
   "devDependencies": {
     "@babel/core": "^7.12.1",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
@@ -37,7 +41,6 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
-    "express": "^4.17.1",
     "swiper": "^6.3.3"
   }
 }
