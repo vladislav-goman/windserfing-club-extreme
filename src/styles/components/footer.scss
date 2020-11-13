@@ -1,0 +1,43 @@
+.footer {
+  background-color: $sherwood-green;
+  color: $white;
+  margin-top: 5rem;
+  padding: 2rem 0;
+  &--inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__copyright {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  &__link {
+    font-size: 14px;
+    color: $white;
+    text-decoration: none;
+    transition: $mid-transition;
+    &:hover {
+      color: $harvest-gold;
+    }
+  }
+  .external {
+    height: 27px;
+    display: flex;
+    align-items: center;
+    &__item {
+      margin-right: 29px;
+      &:last-child {
+        margin-right: 0;
+      }
+      path {
+        transition: $mid-transition;
+      }
+      &:hover {
+        path {
+          fill: $harvest-gold;
+        }
+      }
+    }
+  }
+}

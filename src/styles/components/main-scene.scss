@@ -4,11 +4,14 @@
   overflow: hidden;
   color: $white;
   height: calc(100vh - 82px);
-  min-height: 780px;
+  min-height: 520px;
   &--inner {
-    height: 780px;
-    max-height: 100%;
-    padding: 200px 0 210px;
+    height: calc(100vh - 82px);
+    min-height: 520px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
   }
   &__video {
     width: 100%;
