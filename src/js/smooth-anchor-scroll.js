@@ -1,6 +1,5 @@
-const anchorlinks = document.querySelectorAll('a[href^="#"]');
-for (let item of anchorlinks) {
-  // relitere
+const anchorLinks = document.querySelectorAll('a[href^="#"]');
+for (let item of anchorLinks) {
   item.addEventListener('click', (e) => {
     const hashValue = item.getAttribute('href');
     const target = document.querySelector(hashValue);

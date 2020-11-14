@@ -5,6 +5,8 @@ const common = require('./webpack.common.js');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -21,6 +23,27 @@ module.exports = merge(common, {
       filename: 'styles/[name].[contenthash].css',
       chunkFilename: '[id].css',
     }),
+    new ImageMinimizerPlugin({
+      minimizerOptions: {
+        plugins: [
+          'pngquant',
+          ['gifsicle', { interlaced: true }],
+          ['jpegtran', { progressive: true }],
+          ['optipng', { optimizationLevel: 5 }],
+          [
+            'svgo',
+            {
+              plugins: [
+                {
+                  removeViewBox: false,
+                },
+              ],
+            },
+          ],
+        ],
+      },
+    }),
+    new CompressionPlugin(),
   ],
   module: {
     rules: [
@@ -52,7 +75,7 @@ module.exports = merge(common, {
     },
   },
   performance: {
-    hints: true,
+    hints: 'warning',
     maxEntrypointSize: 512000,
     maxAssetSize: 512000,
   },
