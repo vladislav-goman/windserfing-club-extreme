@@ -38,9 +38,6 @@
     @include half-stripe(13px, 15px);
   }
 
-  .right-bottom {
-  }
-
   &.open {
     .left-top {
       transform: rotate(45deg) scaleX(1.4) translate(4px, 4px);

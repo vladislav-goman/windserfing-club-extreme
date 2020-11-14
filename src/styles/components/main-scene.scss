@@ -5,8 +5,10 @@
   color: $white;
   height: calc(100vh - 82px);
   min-height: 520px;
+  background-color: $lochinvar;
   @include use-mobile() {
     min-height: 300px;
+    height: calc(100vh - 64px);
   }
   &--inner {
     height: calc(100vh - 82px);
@@ -16,6 +18,7 @@
     justify-content: center;
     flex-direction: column;
     @include use-mobile() {
+      height: calc(100vh - 64px);
       width: auto;
       min-height: 300px;
     }
@@ -25,6 +28,9 @@
     @include use-mobile() {
       height: 100%;
       width: auto;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     &--container {

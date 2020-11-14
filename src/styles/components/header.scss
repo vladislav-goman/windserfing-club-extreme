@@ -61,20 +61,22 @@
   .js-mobile-menu {
     display: none;
     padding: 1rem 2rem;
-    width: 70vw;
-    max-width: 350px;
+    width: 100vw;
+    max-width: 414px;
     align-items: flex-start;
     flex-direction: column;
     position: absolute;
     bottom: 0;
     right: 0;
     background-color: $white;
-    transform: translateX(100%) translateY(100%);
+    transform: translateY(100%);
     transition: $mid-transition;
+    opacity: 0;
+    visibility: hidden;
     z-index: 100;
+    overflow: hidden;
     @include use-mobile() {
       display: flex;
-      box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.25);
       .header__link,
       .tel,
       .info {
@@ -94,7 +96,8 @@
     }
 
     &.open {
-      transform: translateX(0) translateY(100%);
+      visibility: visible;
+      opacity: 1;
     }
   }
 }
