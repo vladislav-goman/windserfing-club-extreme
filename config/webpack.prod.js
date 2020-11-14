@@ -27,7 +27,6 @@ module.exports = merge(common, {
       minimizerOptions: {
         plugins: [
           'pngquant',
-          ['gifsicle', { interlaced: true }],
           ['jpegtran', { progressive: true }],
           ['optipng', { optimizationLevel: 5 }],
           [
