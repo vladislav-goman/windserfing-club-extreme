@@ -1,4 +1,20 @@
 @font-face {
   font-family: 'Rubick';
-  src: url('../fonts/Rubik-VariableFont_wght.ttf');
+  font-weight: 400;
+  src: url('../fonts/Rubik-Regular.ttf');
+}
+@font-face {
+  font-family: 'Rubick';
+  font-weight: 600;
+  src: url('../fonts/Rubik-Medium.ttf');
+}
+@font-face {
+  font-family: 'Rubick';
+  font-weight: 700;
+  src: url('../fonts/Rubik-Bold.ttf');
+}
+@font-face {
+  font-family: 'Rubick';
+  font-weight: 900;
+  src: url('../fonts/Rubik-Black.ttf');
 }

@@ -1,0 +1,66 @@
+.rent {
+  padding: 71px 0 87px;
+  text-align: center;
+  &__header {
+    font-size: 48px;
+    margin: 0 0 63px;
+    font-weight: bold;
+    color: $sherwood-green;
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 33%;
+    &:hover {
+      h3 {
+        color: $harvest-gold;
+      }
+      img {
+        transform: rotate(-15deg);
+      }
+    }
+  }
+  &__image {
+    height: 84px;
+    width: 84px;
+    margin-bottom: 15px;
+    position: relative;
+    transition: $mid-transition;
+  }
+  &__name {
+    font-size: 36px;
+    margin: 0 0 1rem;
+    white-space: nowrap;
+    transition: $mid-transition;
+  }
+  &__description {
+    font-size: 24px;
+    margin: 0 0 1rem;
+  }
+  &__price {
+    font-size: 48px;
+    color: $sherwood-green;
+    font-weight: bold;
+    margin: 0;
+  }
+  &.equipment {
+    background-color: $lochinvar;
+    color: $black;
+    .rent__header {
+      color: $black;
+    }
+    .rent__price {
+      color: $white;
+    }
+    .rent__body {
+      justify-content: space-around;
+    }
+  }
+}
