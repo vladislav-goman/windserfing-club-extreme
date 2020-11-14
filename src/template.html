@@ -20,8 +20,8 @@
               </a>
               <nav class="header__nav">
                 <a href="#training" class="header__link">Обучение</a>
-                <a href="#" class="header__link">Прогноз ветра</a>
-                <a href="#" class="header__link">Как проехать?</a>
+                <a href="#forecast" class="header__link">Прогноз ветра</a>
+                <a href="#ways" class="header__link">Как проехать?</a>
               </nav>
               <div class="header__tel">
                 <a href="tel:+375296856034" class="tel">+375 (29) 685-60-34</a>
@@ -218,6 +218,73 @@
                   <h3 class="key">2 взрослых+1 ребенок</h3>
                   <p class="value">50 р/день</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="forecast" class="forecast">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="forecast__header">Прогноз ветра</h2>
+            </div>
+            <div class="col-md-12">
+              <div class="forecast__iframe--container">
+                <iframe
+                  sandbox="allow-forms allow-scripts"
+                  src="https://windguru.by/#tabid_0_options_link"
+                  height="370px"
+                  width="840px"
+                  frameborder="0"
+                  class="forecast__iframe"
+                  >Ваш браузер не поддерживает плавающие фреймы!</iframe
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ways" class="way">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="way__header">Как проехать?</h2>
+            </div>
+            <div class="col-md-12">
+              <div class="way__body">
+                <div class="way__iframe">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26562.409487470788!2d27.36236237303785!3d53.95292717034842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc315381f45a1%3A0xa2ca4206dff7b5c7!2z0JLQuNC90LTRgdC10YDRhNC40L3Qsy3QutC70YPQsSBFeHRyZW1l!5e0!3m2!1sru!2sru!4v1466755804110"
+                    allowfullscreen="allowfullscreen"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                  ></iframe>
+                </div>
+                <article class="way__item train">
+                  <img src="/assets/icons/train.svg" alt="Поезд" class="way__image" />
+                  <p class="way__description">с ж/д вокзала на электричке: направления Молодечно - выйти на остановке «Минское море».</p>
+                </article>
+                <article class="way__item bus">
+                  <img src="/assets/icons/bus.svg" alt="Автобус" class="way__image" />
+                  <p class="way__description">
+                    со станции метро "Пушкинская" на автобусах № 219, 227, 419 - выйти на остановке «Минское море».
+                  </p>
+                </article>
+                <article class="way__item car">
+                  <img src="/assets/icons/car.svg" alt="Машина" class="way__image" />
+                  <p class="way__description">
+                    если Вы на автомобиле -
+                    <a
+                      target="_blank"
+                      href="https://www.google.ru/maps/dir//%D0%92%D0%B8%D0%BD%D0%B4%D1%81%D0%B5%D1%80%D1%84%D0%B8%D0%BD%D0%B3-%D0%BA%D0%BB%D1%83%D0%B1+Extreme/@53.9546959,27.2981091,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x46dbc315381f45a1:0xa2ca4206dff7b5c7!2m2!1d27.3681484!2d53.9546153!3e0"
+                      class="way__link"
+                      >жмите</a
+                    >
+                    для построения маршрута.
+                  </p>
+                </article>
               </div>
             </div>
           </div>

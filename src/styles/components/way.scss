@@ -1,0 +1,56 @@
+.way {
+  padding: 0 0 84px;
+  &__header {
+    font-size: 48px;
+    margin: 0 0 62px;
+    font-weight: bold;
+    color: $sherwood-green;
+    text-align: center;
+  }
+  &__body {
+    display: grid;
+    grid-template-areas:
+      'map train'
+      'map bus'
+      'map car';
+    grid-template-columns: 1fr 1fr;
+  }
+  &__iframe {
+    grid-area: map;
+  }
+  &__item {
+    padding-left: 4rem;
+    margin-bottom: 46px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.car {
+      grid-area: car;
+    }
+    &.train {
+      grid-area: train;
+    }
+    &.bus {
+      grid-area: bus;
+    }
+  }
+  &__image {
+    width: 84x;
+    height: 84px;
+  }
+  &__description {
+    margin: 1rem 0 0;
+    padding: 12px 15px;
+    background-color: $lochinvar;
+    color: $white;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  &__link {
+    color: $sherwood-green;
+    transition: $mid-transition;
+    &:hover {
+      color: $harvest-gold;
+    }
+  }
+}

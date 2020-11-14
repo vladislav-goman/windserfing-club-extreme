@@ -1,0 +1,13 @@
+.forecast {
+  text-align: center;
+  padding: 0 0 123px;
+  &__header {
+    font-size: 48px;
+    margin: 0 0 62px;
+    font-weight: bold;
+    color: $sherwood-green;
+  }
+  &__iframe {
+    margin: auto;
+  }
+}
