@@ -1,8 +1,15 @@
 .header {
   width: 100%;
   padding: 6px 0 11px;
+  position: relative;
+  @include use-mobile() {
+    padding: 8px 0;
+  }
   &__logo {
     height: 65px;
+    @include use-mobile() {
+      height: 3rem;
+    }
     &--container {
       display: flex;
       padding-right: 1rem;
@@ -13,6 +20,9 @@
     align-items: center;
     justify-content: flex-end;
     flex: 2;
+    @include use-mobile() {
+      display: none;
+    }
   }
   &__link {
     padding: 0.3rem 1rem;
@@ -30,6 +40,9 @@
     justify-content: center;
     height: 100%;
     padding: 0 1rem;
+    @include use-mobile() {
+      display: none;
+    }
   }
   &__info {
     padding-left: 1rem;
@@ -43,6 +56,45 @@
     text-decoration: none;
     &:hover {
       color: $lochinvar;
+    }
+  }
+  .js-mobile-menu {
+    display: none;
+    padding: 1rem 2rem;
+    width: 70vw;
+    max-width: 350px;
+    align-items: flex-start;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $white;
+    transform: translateX(100%) translateY(100%);
+    transition: $mid-transition;
+    z-index: 100;
+    @include use-mobile() {
+      display: flex;
+      box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.25);
+      .header__link,
+      .tel,
+      .info {
+        padding: 0;
+        margin: 0 0 1rem;
+      }
+      .mobile-nav,
+      .tels,
+      .infos {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        border-bottom: 4px solid $lochinvar;
+        width: 100%;
+      }
+    }
+
+    &.open {
+      transform: translateX(0) translateY(100%);
     }
   }
 }

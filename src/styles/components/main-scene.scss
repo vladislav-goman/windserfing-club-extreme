@@ -5,6 +5,9 @@
   color: $white;
   height: calc(100vh - 82px);
   min-height: 520px;
+  @include use-mobile() {
+    min-height: 300px;
+  }
   &--inner {
     height: calc(100vh - 82px);
     min-height: 520px;
@@ -12,9 +15,17 @@
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    @include use-mobile() {
+      width: auto;
+      min-height: 300px;
+    }
   }
   &__video {
     width: 100%;
+    @include use-mobile() {
+      height: 100%;
+      width: auto;
+    }
 
     &--container {
       position: absolute;
@@ -22,6 +33,9 @@
       left: 0;
       width: 100vw;
       max-height: 100%;
+      @include use-mobile() {
+        height: 100%;
+      }
     }
   }
 
@@ -32,6 +46,10 @@
     text-transform: uppercase;
     max-width: 644px;
     margin: 0 0 9px;
+    @include use-mobile() {
+      font-size: 36px;
+      line-height: 47px;
+    }
   }
 
   &__description {
@@ -39,6 +57,11 @@
     max-width: 493px;
     padding: 0 7px;
     position: relative;
+    @include use-mobile() {
+      font-size: 24px;
+      padding: 0;
+      margin: 0 0 2rem;
+    }
 
     &--text {
       margin: 0 0 34px;
@@ -46,6 +69,10 @@
       line-height: 43px;
       z-index: 1;
       position: relative;
+      @include use-mobile() {
+        background-color: $sherwood-green;
+        display: inline;
+      }
     }
 
     &::before,
@@ -58,6 +85,9 @@
       left: -7px;
       background-color: $sherwood-green;
       z-index: 0;
+      @include use-mobile() {
+        display: none;
+      }
     }
     &::after {
       width: 232px;

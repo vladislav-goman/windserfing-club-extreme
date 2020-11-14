@@ -1,11 +1,18 @@
 .way {
   padding: 0 0 84px;
+  @include use-mobile() {
+    padding: 0 0 3rem;
+  }
   &__header {
     font-size: 48px;
     margin: 0 0 62px;
     font-weight: bold;
     color: $sherwood-green;
     text-align: center;
+    @include use-mobile() {
+      font-size: 36px;
+      margin: 0 0 2rem;
+    }
   }
   &__body {
     display: grid;
@@ -14,15 +21,27 @@
       'map bus'
       'map car';
     grid-template-columns: 1fr 1fr;
+    @include use-mobile() {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
   }
   &__iframe {
     grid-area: map;
+    @include use-mobile() {
+      height: 500px;
+      width: 100%;
+    }
   }
   &__item {
     padding-left: 4rem;
     margin-bottom: 46px;
     &:last-child {
       margin-bottom: 0;
+      @include use-mobile() {
+        margin-bottom: 2rem;
+      }
     }
     &.car {
       grid-area: car;
@@ -33,10 +52,22 @@
     &.bus {
       grid-area: bus;
     }
+    @include use-mobile() {
+      padding-left: 0;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
   }
   &__image {
-    width: 84x;
+    width: 84px;
     height: 84px;
+    @include use-mobile() {
+      width: 64px;
+      height: 64px;
+    }
   }
   &__description {
     margin: 1rem 0 0;
@@ -45,6 +76,12 @@
     color: $white;
     font-size: 24px;
     line-height: 28px;
+    @include use-mobile() {
+      margin: 0.5rem 0 0;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: justify;
+    }
   }
   &__link {
     color: $sherwood-green;

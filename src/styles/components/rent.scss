@@ -1,16 +1,27 @@
 .rent {
   padding: 71px 0 87px;
+  @include use-mobile() {
+    padding: 3rem 0;
+  }
   text-align: center;
   &__header {
     font-size: 48px;
     margin: 0 0 63px;
     font-weight: bold;
     color: $sherwood-green;
+    @include use-mobile() {
+      font-size: 36px;
+      margin: 0 0 2rem;
+    }
   }
   &__body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include use-mobile() {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
   }
   &__item {
     display: flex;
@@ -18,6 +29,16 @@
     flex-direction: column;
     position: relative;
     width: 33%;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include use-mobile() {
+      width: 100%;
+      margin-bottom: 2rem;
+      border: 2px solid $sherwood-green;
+      border-radius: 4px;
+      padding: 1.75rem 0 1rem;
+    }
     &:hover {
       h3 {
         color: $harvest-gold;
@@ -33,26 +54,47 @@
     margin-bottom: 15px;
     position: relative;
     transition: $mid-transition;
+    @include use-mobile() {
+      margin: 0 0 0.5rem;
+      height: 64px;
+      width: 64px;
+    }
   }
   &__name {
     font-size: 36px;
     margin: 0 0 1rem;
     white-space: nowrap;
     transition: $mid-transition;
+    @include use-mobile() {
+      margin: 0 0 0.5rem;
+      font-size: 26px;
+    }
   }
   &__description {
     font-size: 24px;
     margin: 0 0 1rem;
+    @include use-mobile() {
+      margin: 0 0 0.5rem;
+      font-size: 18px;
+    }
   }
   &__price {
     font-size: 48px;
     color: $sherwood-green;
     font-weight: bold;
     margin: 0;
+    @include use-mobile() {
+      font-size: 36px;
+    }
   }
   &.equipment {
     background-color: $lochinvar;
     color: $black;
+    .rent__item {
+      @include use-mobile() {
+        border-color: $black;
+      }
+    }
     .rent__header {
       color: $black;
     }

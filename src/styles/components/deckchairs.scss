@@ -1,14 +1,24 @@
 .deckchairs {
   padding: 76px 0 120px;
   text-align: center;
+  @include use-mobile() {
+    padding: 3rem 0;
+  }
   &__header {
     font-size: 48px;
     margin: 0 0 27px;
     font-weight: bold;
     color: $sherwood-green;
+    @include use-mobile() {
+      font-size: 36px;
+      margin: 0 0 1rem;
+    }
   }
   &__image {
     width: 84px;
+    @include use-mobile() {
+      width: 64px;
+    }
     &--container {
       display: flex;
       align-items: center;
@@ -19,6 +29,9 @@
   &__table {
     width: 80%;
     margin: auto;
+    @include use-mobile() {
+      width: 100%;
+    }
   }
   &__item {
     display: flex;
@@ -28,6 +41,9 @@
     transition: $mid-transition;
     padding: 1rem;
     border-radius: 8px;
+    @include use-mobile() {
+      padding: 0.3rem;
+    }
     &:last-child {
       margin: 0;
     }
@@ -47,12 +63,19 @@
     .key {
       font-size: 36px;
       margin: 0;
+      @include use-mobile() {
+        font-size: 18px;
+        text-align: left;
+      }
     }
     .value {
       font-size: 48px;
       color: $sherwood-green;
       font-weight: bold;
       margin: 0;
+      @include use-mobile() {
+        font-size: 24px;
+      }
     }
   }
 }

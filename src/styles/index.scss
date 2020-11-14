@@ -4,7 +4,8 @@
 // Font
 @import './fonts/font.scss';
 // Share
-@import './share/variables';
+@import './share/variables.scss';
+@import './share/mixins.scss';
 // Styling
 @import './components/main.scss';
 @import './components/header.scss';
@@ -17,3 +18,4 @@
 @import './components/deckchairs.scss';
 @import './components/forecast.scss';
 @import './components/way.scss';
+@import './components/hamburger.scss';

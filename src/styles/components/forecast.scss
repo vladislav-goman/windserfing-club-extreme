@@ -10,4 +10,7 @@
   &__iframe {
     margin: auto;
   }
+  @include use-mobile() {
+    display: none;
+  }
 }

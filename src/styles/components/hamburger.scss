@@ -1,0 +1,72 @@
+@mixin half-stripe($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: 15px;
+  height: 3px;
+  background-color: $sherwood-green;
+  transition: $mid-transition;
+}
+
+.js-hamburger-menu {
+  width: 30px;
+  height: 29px;
+  position: relative;
+  cursor: pointer;
+
+  @media screen and (min-width: $breakpoint) {
+    display: none;
+  }
+
+  .left-top {
+    @include half-stripe(0, 0);
+  }
+
+  .left-medium {
+    @include half-stripe(13px, 0);
+  }
+
+  .left-bottom {
+    @include half-stripe(26px, 0);
+  }
+
+  .right-top {
+    @include half-stripe(0, 15px);
+  }
+
+  .right-medium {
+    @include half-stripe(13px, 15px);
+  }
+
+  .right-bottom {
+  }
+
+  &.open {
+    .left-top {
+      transform: rotate(45deg) scaleX(1.4) translate(4px, 4px);
+    }
+
+    .left-medium {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+
+    .left-bottom {
+      transform: rotate(-45deg) scaleX(1.4) translate(4px, -4px);
+    }
+
+    .right-top {
+      transform: rotate(-45deg) scaleX(1.4) translate(-4px, 4px);
+    }
+
+    .right-medium {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+
+    .right-bottom {
+      @include half-stripe(26px, 15px);
+      transform: rotate(45deg) scaleX(1.4) translate(-4px, -4px);
+    }
+  }
+}
