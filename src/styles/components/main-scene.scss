@@ -7,7 +7,7 @@
   min-height: 520px;
   background-color: $lochinvar;
   @include use-mobile() {
-    min-height: 300px;
+    min-height: 370px;
     height: calc(100vh - 64px);
   }
   &--inner {
@@ -20,17 +20,17 @@
     @include use-mobile() {
       height: calc(100vh - 64px);
       width: auto;
-      min-height: 300px;
+      min-height: 370px;
     }
   }
   &__video {
     width: 100%;
     @include use-mobile() {
+      object-fit: cover;
       height: 100%;
-      width: auto;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
+    }
+    @media screen and (max-width: 650px) {
+      display: none;
     }
 
     &--container {
@@ -39,8 +39,17 @@
       left: 0;
       width: 100vw;
       max-height: 100%;
+      .main-scene__mobile {
+        display: none;
+      }
       @include use-mobile() {
         height: 100%;
+        .main-scene__mobile {
+          width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: cover;
+        }
       }
     }
   }
