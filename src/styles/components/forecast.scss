@@ -13,4 +13,16 @@
   @include use-mobile() {
     display: none;
   }
+  &__description {
+    text-align: center;
+    font-size: 18px;
+    margin: 2rem 0 0;
+  }
+  &__source {
+    color: $sherwood-green;
+    transition: $mid-transition;
+    &:hover {
+      color: $harvest-gold;
+    }
+  }
 }
