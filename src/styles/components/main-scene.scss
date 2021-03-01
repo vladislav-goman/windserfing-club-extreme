@@ -5,7 +5,7 @@
   color: $white;
   height: calc(100vh - 82px);
   min-height: 520px;
-  background-color: $lochinvar;
+  background-color: $primary-color;
   @include use-mobile() {
     min-height: 370px;
     height: calc(100vh - 64px);
@@ -23,33 +23,26 @@
       min-height: 370px;
     }
   }
-  &__video {
+  &__background {
     width: 100%;
     @include use-mobile() {
       object-fit: cover;
       height: 100%;
     }
-    @media screen and (max-width: 650px) {
-      display: none;
+    @media screen and (max-width: 450px) {
+      width: 600px;
+      position: relative;
     }
 
     &--container {
       position: absolute;
+      overflow: hidden;
       top: 0;
       left: 0;
       width: 100vw;
       max-height: 100%;
-      .main-scene__mobile {
-        display: none;
-      }
       @include use-mobile() {
         height: 100%;
-        .main-scene__mobile {
-          width: 100%;
-          height: 100%;
-          display: block;
-          object-fit: cover;
-        }
       }
     }
   }
@@ -60,56 +53,33 @@
     line-height: 57px;
     text-transform: uppercase;
     max-width: 644px;
-    margin: 0 0 9px;
+    margin: 0 0 30px;
+    padding-left: 9px;
     @include use-mobile() {
       font-size: 36px;
+      padding-left: 5px;
       line-height: 47px;
     }
-  }
 
-  &__description {
-    font-size: 36px;
-    max-width: 493px;
-    padding: 0 7px;
-    position: relative;
-    @include use-mobile() {
-      font-size: 24px;
-      padding: 0;
-      margin: 0 0 2rem;
-    }
-
-    &--text {
-      margin: 0 0 34px;
-      width: 100%;
-      line-height: 43px;
-      z-index: 1;
+    &--row {
       position: relative;
-      @include use-mobile() {
-        background-color: $sherwood-green;
-        display: inline;
+      z-index: 1;
+      &::before {
+        content: '';
+        width: calc(100% + 9px);
+        height: 36px;
+        position: absolute;
+        top: 18px;
+        left: -9px;
+        background-color: $primary-color;
+        z-index: -1;
+        @include use-mobile() {
+          width: calc(100% + 5px);
+          left: -5px;
+          height: 27px;
+          top: 12px;
+        }
       }
-    }
-
-    &::before,
-    &::after {
-      content: '';
-      width: calc(100% + 14px);
-      height: 23px;
-      position: absolute;
-      top: 20px;
-      left: -7px;
-      background-color: $sherwood-green;
-      z-index: 0;
-      @include use-mobile() {
-        display: none;
-      }
-    }
-    &::after {
-      width: 232px;
-      top: 63px;
-      left: -7px;
-      background-color: $sherwood-green;
-      z-index: 0;
     }
   }
 
@@ -127,8 +97,8 @@
 
     &:hover {
       background-color: $white;
-      color: $sherwood-green;
-      border-color: $sherwood-green;
+      color: $primary-color;
+      border-color: $primary-color;
     }
   }
 }

@@ -5,7 +5,8 @@
   }
   &__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 555px 555px 555px;
     @include use-mobile() {
       display: flex;
@@ -54,8 +55,12 @@
     font-weight: 900;
     font-size: 96px;
     line-height: 114px;
-    color: $harvest-gold;
+    color: $secondary-color;
     display: inline-block;
+    @media screen and (max-width:1200px){
+      font-size: 3.5rem;
+      line-height: 80px;
+    }
     @include use-mobile() {
       font-size: 3.5rem;
       line-height: 80px;
@@ -65,11 +70,16 @@
     font-weight: 900;
     font-size: 48px;
     line-height: 57px;
-    color: $sherwood-green;
+    color: $primary-color;
     display: inline-block;
     margin: 0;
     position: relative;
     left: -1.5rem;
+    @media screen and (max-width:1200px){
+      left: -1rem;
+      font-size: 2rem;
+      line-height: 45px;
+    }
     @include use-mobile() {
       left: -1rem;
       font-size: 2rem;

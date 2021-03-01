@@ -5,7 +5,7 @@
     font-size: 48px;
     margin: 0 0 62px;
     font-weight: bold;
-    color: $sherwood-green;
+    color: $primary-color;
   }
   &__iframe {
     margin: auto;
@@ -19,10 +19,10 @@
     margin: 2rem 0 0;
   }
   &__source {
-    color: $sherwood-green;
+    color: $primary-color;
     transition: $mid-transition;
     &:hover {
-      color: $harvest-gold;
+      color: $secondary-color;
     }
   }
 }

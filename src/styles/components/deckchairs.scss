@@ -8,7 +8,7 @@
     font-size: 48px;
     margin: 0 0 27px;
     font-weight: bold;
-    color: $sherwood-green;
+    color: $primary-color;
     @include use-mobile() {
       font-size: 36px;
       margin: 0 0 1rem;
@@ -48,7 +48,7 @@
       margin: 0;
     }
     &:hover {
-      background-color: $harvest-gold;
+      background-color: $secondary-color;
       box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.1);
       .key,
       .value {
@@ -70,7 +70,7 @@
     }
     .value {
       font-size: 48px;
-      color: $sherwood-green;
+      color: $primary-color;
       font-weight: bold;
       margin: 0;
       @include use-mobile() {

@@ -1,0 +1,68 @@
+.equipment {
+  padding: 110px 0 0;
+  text-align: center;
+  @include use-mobile() {
+    padding: 3rem 0;
+  }
+  &__header {
+    font-size: 48px;
+    margin: 0 0 28px;
+    font-weight: bold;
+    color: $primary-color;
+    @include use-mobile() {
+      font-size: 36px;
+      margin: 0 0 2rem;
+    }
+  }
+  &__description {
+    font-size: 36px;
+    margin: 0 0 43px;
+    font-weight: bold;
+    line-height: 43px;
+    color: $black;
+    @include use-mobile() {
+      font-size: 20px;
+      margin: 0 0 1.25rem;
+    }
+
+    &--link {
+      color: $black;
+      transition: $mid-transition;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  .list {
+    max-width: 793px;
+    padding: 0;
+    margin: auto;
+    font-size: 24px;
+    text-align: justify;
+    list-style: none;
+    @include use-mobile() {
+      font-size: 18px;
+    }
+
+    &__name {
+      font-size: 24px;
+      margin: 0 0 39px;
+      @include use-mobile() {
+        font-size: 18px;
+        margin: 0 0 1.25rem;
+      }
+    }
+    
+    .point:empty {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      margin: 5px 0;
+      margin-right: .5rem;
+      border-radius: 50%;
+      background-color: $primary-color;
+    }
+  }
+}

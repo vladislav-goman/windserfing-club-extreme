@@ -1,5 +1,5 @@
 .rent {
-  padding: 71px 0 87px;
+  padding: 99px 0 87px;
   @include use-mobile() {
     padding: 3rem 0;
   }
@@ -8,7 +8,7 @@
     font-size: 48px;
     margin: 0 0 63px;
     font-weight: bold;
-    color: $sherwood-green;
+    color: $primary-color;
     @include use-mobile() {
       font-size: 36px;
       margin: 0 0 2rem;
@@ -35,13 +35,13 @@
     @include use-mobile() {
       width: 100%;
       margin-bottom: 2rem;
-      border: 2px solid $sherwood-green;
+      border: 2px solid $primary-color;
       border-radius: 4px;
       padding: 1.75rem 0 1rem;
     }
     &:hover {
       h3 {
-        color: $harvest-gold;
+        color: $secondary-color;
       }
       img {
         transform: rotate(-15deg);
@@ -80,15 +80,15 @@
   }
   &__price {
     font-size: 48px;
-    color: $sherwood-green;
+    color: $primary-color;
     font-weight: bold;
     margin: 0;
     @include use-mobile() {
       font-size: 36px;
     }
   }
-  &.equipment {
-    background-color: $lochinvar;
+  &.equipment-rent {
+    background-color: $primary-color;
     color: $black;
     .rent__item {
       @include use-mobile() {

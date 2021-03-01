@@ -16,7 +16,7 @@
           <div class="col-md-12">
             <div class="header--inner">
               <a href="/" class="header__logo--container">
-                <img src="/assets/logo.svg" alt="Windsurf" class="header__logo" />
+                <img src="/assets/logo.png" alt="Windsurf" class="header__logo" />
               </a>
               <nav class="header__nav">
                 <a href="#training" class="header__link">Обучение</a>
@@ -62,20 +62,21 @@
 
     <main id="main">
       <section class="main-scene">
-        <div class="main-scene__video--container">
-          <video id="main-video" class="main-scene__video" autoplay muted loop>
-            <source src="/assets/videos/bg-vid.webm" type="video/webm" />
-          </video>
-          <img class="main-scene__mobile" src="/assets/img/mobile-bg.png" alt="Декорация" />
+        <div class="main-scene__background--container">
+          <img src="/assets/img/main-bg.png" id="main-video" class="main-scene__background" alt="Декорация" />
         </div>
         <div class="container">
           <div class="row">
             <div class="col-md-12">
               <div class="main-scene--inner">
-                <h1 class="main-scene__title">Научись виндсерфить вместе с нами В КЛУБе “EXTREME”!</h1>
-                <div class="main-scene__description">
-                  <p class="main-scene__description--text">Нужен ты, доска и хорошее настроение</p>
-                </div>
+                <h1 class="main-scene__title">
+                  <span class="main-scene__title--row"> LIFE IS BETTER </span>
+                  <br />
+                  <span class="main-scene__title--row"> WHEN YOU </span>
+                  <br />
+                  <span class="main-scene__title--row"> SURF </span>
+                  <br />
+                </h1>
                 <a href="#training" class="main-scene__link">Обучение</a>
               </div>
             </div>
@@ -120,6 +121,7 @@
                   </div>
                   <p class="highlight__description">
                     Не важно, сколько Вам лет, мужчина Вы или женщина, с помощью профессионального инструктора виндсерфинг-клуба "EXTREME"
+                    <br />
                     Вы освоите самые сложные элементы управления парусной доской и сможете получать истинное наслаждение от катания. Мы
                     научим любого!
                   </p>
@@ -171,6 +173,41 @@
           </div>
         </div>
       </section>
+      <section class="equipment">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="equipment__header">Снаряжение для виндсерфинга</h2>
+              <h3 class="equipment__description">
+                Вы нуждаетесь в снаряжении для виндсерфинга?
+                <br />
+                Звоните <a class="equipment__description--link" href="tel:+375296856034">+375 (29) 685 60 34</a>
+              </h3>
+              <p class="list__name">Обратившись к нам, Вы имеете следующие преимущества:</p>
+              <ul class="list">
+                <li class="list__item">
+                  <span class="point"></span>Мы гарантируем квалифицированную консультацию по подбору снаряжения и экипировки, по вооружению
+                  матчасти, по вопросам эксплуатации #windsurf/sup-оборудования;
+                </li>
+                <li class="list__item">
+                  <span class="point"></span>Вы имеете возможность сделать выбор между различной фирменной матчастью.
+                </li>
+                <li class="list__item">
+                  <span class="point"></span>Мы предлагаем снаряжение и экипировку для виндсерфинга и сапсерфинга лучших производителей:
+                  DUOTONE Kiteboarding, ION, Camaro, Fanatic, BIC.
+                </li>
+                <li class="list__item"><span class="point"></span>Мы предоставляем возможность тестирования матчасти.</li>
+                <li class="list__item">
+                  <span class="point"></span>Вы получаете гарантию производителей (1-2 года) на все комплектующие и возможность
+                  послегарантийного обслуживания.
+                </li>
+                <li class="list__item">‎<span class="point"></span>Мы имеем банк данных по продаже старого оборудования.</li>
+                <li class="list__item">‎<span class="point"></span>Вы можете обсудить с нами любые вопросы, касающиеся виндсерфинга.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="rent">
         <div class="container">
           <div class="row">
@@ -202,7 +239,7 @@
           </div>
         </div>
       </section>
-      <section class="rent equipment">
+      <section class="rent equipment-rent">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
@@ -324,7 +361,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="footer--inner">
-              <h2 class="footer__copyright">&copy; 2016-2020 Виндсерфинг-клуб «Extreme»</h2>
+              <h2 class="footer__copyright">&copy; 2016-2021 Виндсерфинг-клуб «Extreme»</h2>
               <a href="mailto:windsurfingby@gmail.com" class="footer__link">windsurfingby@gmail.com</a>
               <nav class="external">
                 <a target="_blank" href="https://www.facebook.com/groups/300115673654711/?fref=mentions" class="external__item">
@@ -382,7 +419,5 @@
         </div>
       </div>
     </footer>
-
-    <!-- <div id="loading-mask" class="loading-mask"></div> -->
   </body>
 </html>

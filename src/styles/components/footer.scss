@@ -1,5 +1,5 @@
 .footer {
-  background-color: $sherwood-green;
+  background-color: $orient;
   color: $white;
   padding: 2rem 0;
   @include use-mobile() {
@@ -27,7 +27,7 @@
     text-decoration: none;
     transition: $mid-transition;
     &:hover {
-      color: $harvest-gold;
+      color: $secondary-color;
     }
     @include use-mobile() {
       margin-bottom: 0.5rem;
@@ -47,7 +47,7 @@
       }
       &:hover {
         path {
-          fill: $harvest-gold;
+          fill: $secondary-color;
         }
       }
     }
