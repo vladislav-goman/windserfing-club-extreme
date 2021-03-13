@@ -46,6 +46,16 @@
       font-size: 18px;
     }
 
+    &__underscript {
+      font-size: 24px;
+      margin: 1.5rem auto 0;
+      max-width: 699px;
+      @include use-mobile() {
+        font-size: 18px;
+        margin: 1rem auto 0;
+      }
+    }
+
     &__name {
       font-size: 24px;
       margin: 0 0 39px;
@@ -54,15 +64,19 @@
         margin: 0 0 1.25rem;
       }
     }
-    
+
     .point:empty {
       display: inline-block;
       width: 5px;
       height: 5px;
       margin: 5px 0;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
       border-radius: 50%;
       background-color: $primary-color;
     }
+  }
+
+  .medium_strong {
+    font-weight: 600;
   }
 }

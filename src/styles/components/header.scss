@@ -76,6 +76,7 @@
     z-index: 100;
     overflow: hidden;
     @include use-mobile() {
+      border-bottom: 4px solid $primary-color;
       display: flex;
       .header__link,
       .tel,

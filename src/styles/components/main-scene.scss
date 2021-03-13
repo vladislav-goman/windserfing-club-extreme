@@ -92,13 +92,14 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: $white;
     transition: $mid-transition;
+    background-color: $white;
+    color: $primary-color;
 
     &:hover {
-      background-color: $white;
-      color: $primary-color;
-      border-color: $primary-color;
+      color: $white;
+      background-color: $primary-color;
+      border-color: $white;
     }
   }
 }
