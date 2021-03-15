@@ -4,12 +4,69 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="keywords" content='Виндсефинг-клуб "EXTREME" минское море виндсерфинг в минске' />
+    <meta
+      name="keywords"
+      content="виндсерфинг-клуб extreme, виндсерфинг в минске, виндсерфинг, минское море, белорусская федерация виндсерфинга, доска парус, обучение виндсерфингу, школа виндсерфинга, занятия виндсерфингом"
+    />
+    <meta
+      name="description"
+      content="Виндсерфинг-клуб Extreme - это идеальное место для того, чтобы научиться, а если вы уже умеете, то просто кататься на доске с парусом всего лишь в нескольких километрах от Минска. Опытные интструкторы мирового класса, огромное количество профессионального инвентаря и приятные цены. Подробности на нашем сайте."
+    />
+    <meta name="theme-color" content="#00b7d6" />
 
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>Виндсерфинг-клуб Extreme на Минском море. Обучение, прокат, эмоции.</title>
   </head>
 
   <body>
+    <div id="loader"></div>
+    <style>
+      @keyframes fadeinall {
+        0% {
+          opacity: 1;
+        }
+        97% {
+          opacity: 0;
+        }
+        98% {
+          opacity: 0;
+          -webkit-transform: translateY(0);
+          transform: translateY(0);
+        }
+        99% {
+          opacity: 0;
+          -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+        }
+        100% {
+          opacity: 0;
+          z-index: -1;
+        }
+      }
+      #loader {
+        opacity: 1;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        background-color: #fff;
+        z-index: 999;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation: fadeinall 1s normal both;
+        animation: fadeinall 1s normal both;
+        -webkit-animation-delay: 0.3s;
+        animation-delay: 0.3s;
+      }
+    </style>
+    <script type="text/javascript">
+      window.onload = function () {
+        setTimeout(function () {
+          document.getElementById('loader').remove();
+        }, 1000);
+      };
+    </script>
     <header class="header">
       <div class="container">
         <div class="row">
