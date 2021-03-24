@@ -5,6 +5,9 @@
   @include use-mobile() {
     padding: 8px 0;
   }
+  @media screen and (max-width: 1200px) and (min-width: $breakpoint) {
+    font-size: .825rem;
+  }
   &__logo {
     height: 65px;
     @include use-mobile() {
