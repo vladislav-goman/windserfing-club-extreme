@@ -37,6 +37,14 @@
     }
 
     &--mobile {
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+      @media screen and (max-width: 450px) {
+        width: 600px;
+        position: relative;
+      }
       display: none;
       @include use-mobile() {
         display: block;
